@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
-    public float jumpForce;
+   
 
 
     float moveInput;
@@ -19,13 +19,7 @@ public class PlayerMovement : MonoBehaviour
        
     }
     // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            rb.velocity = Vector2.up * jumpForce;
-        }
-    }
+   
 
     void FixedUpdate()
     {
