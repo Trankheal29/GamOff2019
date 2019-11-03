@@ -162,11 +162,11 @@ MonoBehaviour:
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 916801396}
+  m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 0.8
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -237,12 +237,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &916801396 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8870131749422980944, guid: e952ce527a1d88b4e97175d8e2e8af33,
-    type: 3}
-  m_PrefabInstance: {fileID: 8870131751247014272}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182186059
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +342,7 @@ Transform:
   m_LocalScale: {x: 7.351, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8870131751247014272
 PrefabInstance:
@@ -400,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 8870131749422980944, guid: e952ce527a1d88b4e97175d8e2e8af33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8870131749422980944, guid: e952ce527a1d88b4e97175d8e2e8af33,
         type: 3}
