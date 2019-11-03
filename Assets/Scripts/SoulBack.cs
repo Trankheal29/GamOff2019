@@ -9,10 +9,16 @@ public class SoulBack : MonoBehaviour
     GameObject playerInScene;
     public GameObject playerRespawn;
     Rigidbody2D rb;
+
+    private void OnEnable()
+    {
+        Destroy(soul, 5);
+    }
     // Update is called once per frame
     void Update()
     {
         GameObject playerInScene = GameObject.FindGameObjectWithTag("Player");
+        
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -22,9 +28,7 @@ public class SoulBack : MonoBehaviour
                 rb = playerInScene.GetComponent<Rigidbody2D>();
                 rb.velocity = new Vector2(0, 0);
                 playerInScene.transform.position = soul.transform.position;
-                playerInScene.GetComponent<PlayerMovement>().enabled = true;
-                playerInScene.GetComponent<SoulCast>().enabled = true;
-                Destroy(soul,0.1f);
+                Destroy(soul);
 
             }
             else
@@ -42,9 +46,7 @@ public class SoulBack : MonoBehaviour
         {
             if (playerInScene)
             {
-            playerInScene.GetComponent<PlayerMovement>().enabled = true;
-            playerInScene.GetComponent<SoulCast>().enabled = true;
-            Destroy(soul);
+                 Destroy(soul);
             }
             else
             {

@@ -19,9 +19,7 @@ public class SoulCast : MonoBehaviour
         {
             Soul.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1f, 0);
             Instantiate(Soul);
-            Player.GetComponent<PlayerMovement>().enabled = false;
-            Player.GetComponent<SoulCast>().enabled = false;
-            
+                       
             
         }
         
