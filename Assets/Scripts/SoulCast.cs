@@ -17,7 +17,7 @@ public class SoulCast : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Soul.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.8f, 0);
+            Soul.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1f, 0);
             Instantiate(Soul);
             Player.GetComponent<PlayerMovement>().enabled = false;
             Player.GetComponent<SoulCast>().enabled = false;

@@ -12,7 +12,7 @@ public class SoulBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject playerInScene = GameObject.Find("Player");
+        GameObject playerInScene = GameObject.FindGameObjectWithTag("Player");
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
