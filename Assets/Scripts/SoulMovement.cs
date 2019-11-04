@@ -6,15 +6,17 @@ public class SoulMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-
+    public float amplitude = 0.5f;
+    public float frequency = 1f;
 
     Vector2 moveInput;
     Vector2 moveSpeed;
- 
+
+    Vector3 tempPos = new Vector3();
+
     Rigidbody2D rb;
-    
 
-
+   
 
     void Start()
     {
@@ -32,6 +34,9 @@ public class SoulMovement : MonoBehaviour
     {
         
         rb.position =  rb.position + moveSpeed * Time.deltaTime;
+        tempPos = rb.position;
+        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
+        rb.position = tempPos;
     }
 }
