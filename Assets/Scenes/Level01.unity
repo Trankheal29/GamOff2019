@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: -0.294, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -325,9 +325,9 @@ GameObject:
   - component: {fileID: 951893653}
   - component: {fileID: 951893655}
   - component: {fileID: 951893654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,9 +432,9 @@ GameObject:
   - component: {fileID: 1173299845}
   - component: {fileID: 1173299847}
   - component: {fileID: 1173299846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,9 +539,9 @@ GameObject:
   - component: {fileID: 1182186062}
   - component: {fileID: 1182186061}
   - component: {fileID: 1182186060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,9 +646,9 @@ GameObject:
   - component: {fileID: 1663677649}
   - component: {fileID: 1663677651}
   - component: {fileID: 1663677650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,6 +742,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!4 &1780167382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8870131749422980944, guid: e952ce527a1d88b4e97175d8e2e8af33,
+    type: 3}
+  m_PrefabInstance: {fileID: 8870131751247014272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1956672770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956672771}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1956672771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956672770}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1780167382}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8870131751247014272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -757,12 +793,12 @@ PrefabInstance:
     - target: {fileID: 8870131749422980944, guid: e952ce527a1d88b4e97175d8e2e8af33,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8870131749422980944, guid: e952ce527a1d88b4e97175d8e2e8af33,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8870131749422980944, guid: e952ce527a1d88b4e97175d8e2e8af33,
         type: 3}
@@ -813,5 +849,20 @@ PrefabInstance:
       propertyPath: m_Lens.OrthographicSize
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8194822441978988038, guid: e952ce527a1d88b4e97175d8e2e8af33,
+        type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194822441978988038, guid: e952ce527a1d88b4e97175d8e2e8af33,
+        type: 3}
+      propertyPath: checkRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194822441978988038, guid: e952ce527a1d88b4e97175d8e2e8af33,
+        type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 1956672771}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e952ce527a1d88b4e97175d8e2e8af33, type: 3}
