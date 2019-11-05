@@ -32,9 +32,10 @@ public class SoulCast : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && WasGrounded == true)
         {
             Soul.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1f, 0);
+            rbPlayer.velocity = new Vector2(0, 0);
             Instantiate(Soul);
             WasGrounded = false;
-            rbPlayer.velocity = new Vector2(0, 0);
+            
 
         }
         
