@@ -9,6 +9,7 @@ public class SoulCast : MonoBehaviour
     public GameObject Player;
     Rigidbody2D rbPlayer;
     public bool isGrounded;
+    bool WasGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -23,13 +24,16 @@ public class SoulCast : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        if(isGrounded == true)
+        {
+            WasGrounded = true;
+        }
 
-        
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && WasGrounded == true)
         {
             Soul.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1f, 0);
             Instantiate(Soul);
-            isGrounded = false;
+            WasGrounded = false;
             rbPlayer.velocity = new Vector2(0, 0);
 
         }
