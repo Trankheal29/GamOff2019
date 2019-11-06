@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     Rigidbody2D rb;
+    Animator anim;
 
 
     public Transform ledgeCheck;
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       
+        anim = GetComponent<Animator>();
     }
     // Update is called once per frame
 
@@ -59,15 +60,22 @@ public class PlayerMovement : MonoBehaviour
 
     void DirectionCheck()
     {
-        if(moveInput > 0 && !isFacingRight)
+        if (moveInput == 0 )
+        {
+            anim.SetBool("IsWalking", false);
+        }
+
+            if (moveInput > 0)
         {
             isFacingRight = !isFacingRight;
+            anim.SetBool("IsWalking", true);
             transform.localScale = new Vector3(1f, 1f, 0);
 
         }
-        else if(moveInput<0 && isFacingRight)
+        else if(moveInput<0 )
         {
             isFacingRight = !isFacingRight;
+            anim.SetBool("IsWalking", true);
             transform.localScale = new Vector3(-1f, 1f, 0);
         }
     }

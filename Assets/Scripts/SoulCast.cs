@@ -13,11 +13,13 @@ public class SoulCast : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
+    Animator anim;
 
 
     private void Start()
     {
         rbPlayer = Player.GetComponent<Rigidbody2D>();
+        anim = Player.GetComponent<Animator>();
     }
 
     
@@ -34,6 +36,7 @@ public class SoulCast : MonoBehaviour
             Soul.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1f, 0);
             Instantiate(Soul);
             WasGrounded = false;
+            anim.SetBool("Cast", true);
             
           
         }

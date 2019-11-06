@@ -9,6 +9,8 @@ public class SoulBack : MonoBehaviour
     GameObject playerInScene;
     public GameObject playerRespawn;
     Rigidbody2D rb;
+    Animator anim;
+
 
     private void OnEnable()
     {
@@ -26,6 +28,7 @@ public class SoulBack : MonoBehaviour
             if (playerInScene) {
 
                 rb = playerInScene.GetComponent<Rigidbody2D>();
+                anim = playerInScene.GetComponent<Animator>();
                 rb.velocity = new Vector2(0, 0);
                 playerInScene.transform.position = soul.transform.position;
                 Destroy(soul);
@@ -47,6 +50,7 @@ public class SoulBack : MonoBehaviour
             if (playerInScene)
             {
                  Destroy(soul);
+                
             }
             else
             {

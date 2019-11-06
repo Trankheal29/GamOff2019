@@ -7,6 +7,7 @@ public class SoulManagement : MonoBehaviour
     GameObject soulInScene;
     GameObject playerInScene;
     Rigidbody2D rb2D;
+    Animator anim;
     // Update is called once per frame
     
     void Update()
@@ -14,6 +15,7 @@ public class SoulManagement : MonoBehaviour
         playerInScene = GameObject.FindGameObjectWithTag("Player");
         soulInScene = GameObject.FindGameObjectWithTag("Soul");
         rb2D = playerInScene.GetComponent<Rigidbody2D>();
+        anim = playerInScene.GetComponent<Animator>();
 
         if (soulInScene != null)
         {
@@ -23,7 +25,7 @@ public class SoulManagement : MonoBehaviour
         }
         else
         {
-            
+            anim.SetBool("Cast", false);
             playerInScene.GetComponent<PlayerMovement>().enabled = true;
             playerInScene.GetComponent<SoulCast>().enabled = true; 
         }

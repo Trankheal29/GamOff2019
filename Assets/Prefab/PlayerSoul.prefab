@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736410975}
   - component: {fileID: 1736410976}
+  - component: {fileID: 659316626}
   m_Layer: 0
   m_Name: SoulDuration
   m_TagString: Untagged
@@ -104,8 +105,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736410974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.729, z: 0}
-  m_LocalScale: {x: 1.5, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.6, z: 0}
   m_Children: []
   m_Father: {fileID: 4649074248497951202}
   m_RootOrder: 2
@@ -148,8 +149,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29f6e85926d02c04293d9bf21d2d6ea3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4e8ae4ff8b1f3dd45b850b978ece10c9, type: 3}
+  m_Color: {r: 1, g: 0.973376, b: 0.023584902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -159,6 +160,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &659316626
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736410974}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ca6d1df86ed79f41945c09c1cd612a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1883579540981275980
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3165428523902495965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.477007, y: -6.485, z: 0}
+  m_LocalPosition: {x: -0.051, y: 1.1725447, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 7171924072651653095}
@@ -386,9 +406,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 79e9bd3180e2a9b4da48fd74ac54649b, type: 3}
-  m_Color: {r: 0.9473761, g: 0.9528302, b: 0.16629584, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -7355270604759154559, guid: 655dfaf7eed53454f9d14d3102df0f0e,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -432,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  amplitude: 0.05
+  amplitude: 0.01
   frequency: 1
 --- !u!114 &-8030165884931380077
 MonoBehaviour:
