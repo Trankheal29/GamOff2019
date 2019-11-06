@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  climbSpeed: 0
+  climbSpeed: 75
   wallCheckDistance: 0.2
   ledgeCheck: {fileID: 2357210582240698770}
   wallCheck: {fileID: 4842906529271483736}
