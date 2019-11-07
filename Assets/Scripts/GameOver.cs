@@ -10,6 +10,6 @@ public class GameOver : MonoBehaviour
     {
         Debug.Log("enter");
         Destroy(collision.gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 }

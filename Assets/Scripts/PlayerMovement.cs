@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private bool isTouchingWall;
     private bool isTouchingLedge;
-    private bool canClimbLedge = false;
     private bool ledgeDetected = false;
    
     

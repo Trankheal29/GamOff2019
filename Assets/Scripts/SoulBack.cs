@@ -9,26 +9,27 @@ public class SoulBack : MonoBehaviour
     GameObject playerInScene;
     public GameObject playerRespawn;
     Rigidbody2D rb;
-    Animator anim;
-
+    public float soulDuration = 5f;
+    bool contact;
+    
 
     private void OnEnable()
     {
-        Destroy(soul, 5);
+        Destroy(soul, soulDuration);
     }
     // Update is called once per frame
     void Update()
     {
         GameObject playerInScene = GameObject.FindGameObjectWithTag("Player");
+
         
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && contact == false)
         {
            
             if (playerInScene) {
 
                 rb = playerInScene.GetComponent<Rigidbody2D>();
-                anim = playerInScene.GetComponent<Animator>();
                 rb.velocity = new Vector2(0, 0);
                 playerInScene.transform.position = soul.transform.position;
                 Destroy(soul);
@@ -43,6 +44,9 @@ public class SoulBack : MonoBehaviour
             }
 
 
+        }else if (Input.GetKeyDown(KeyCode.Space) && contact == true)
+        {
+            Debug.Log("NO SPACE");
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -57,5 +61,15 @@ public class SoulBack : MonoBehaviour
                 Debug.Log("No body available");
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        contact = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        contact = false;
     }
 }
