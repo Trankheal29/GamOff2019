@@ -489,7 +489,7 @@ MonoBehaviour:
   soul: {fileID: 3165428523902495965}
   playerRespawn: {fileID: 8870131749422980942, guid: e952ce527a1d88b4e97175d8e2e8af33,
     type: 3}
-  soulDuration: 50
+  soulDuration: 5
 --- !u!95 &-7283380481988653348
 Animator:
   serializedVersion: 3

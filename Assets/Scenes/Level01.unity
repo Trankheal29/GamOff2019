@@ -6397,14 +6397,5 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 152219874}
-    - target: {fileID: 8870131749422980946, guid: e952ce527a1d88b4e97175d8e2e8af33,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195198562, guid: e952ce527a1d88b4e97175d8e2e8af33, type: 3}
-      propertyPath: m_LookaheadSmoothing
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e952ce527a1d88b4e97175d8e2e8af33, type: 3}
