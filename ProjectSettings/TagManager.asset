@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Soul
   - Ground
+  - Bound
   layers:
   - Default
   - TransparentFX
