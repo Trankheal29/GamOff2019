@@ -10,12 +10,35 @@ public class SoulBack : MonoBehaviour
     public GameObject playerRespawn;
     Rigidbody2D rb;
     public float soulDuration = 5f;
-    bool contact;
+    bool contact = false;
+   
     
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ground")) {
+            contact = true;
+            Debug.Log("contact");
+        }
+        return;
+
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ground"))
+        {
+            contact = false;
+            Debug.Log("nocontact");
+        }
+        return;
+    }
 
     private void OnEnable()
     {
-        Destroy(soul, soulDuration);
+        
+       Destroy(soul, soulDuration);
     }
     // Update is called once per frame
     void Update()
@@ -63,13 +86,5 @@ public class SoulBack : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        contact = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        contact = false;
-    }
+   
 }

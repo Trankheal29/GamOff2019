@@ -318,7 +318,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 4e8ae4ff8b1f3dd45b850b978ece10c9, type: 3}
   m_Color: {r: 1, g: 0.973376, b: 0.023584902, a: 1}
   m_FlipX: 0
@@ -379,7 +379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3165428523902495965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.515388, y: -2.8374553, z: 0}
+  m_LocalPosition: {x: 47.17813, y: -12.414279, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 453807300}
@@ -489,7 +489,7 @@ MonoBehaviour:
   soul: {fileID: 3165428523902495965}
   playerRespawn: {fileID: 8870131749422980942, guid: e952ce527a1d88b4e97175d8e2e8af33,
     type: 3}
-  soulDuration: 5
+  soulDuration: 50
 --- !u!95 &-7283380481988653348
 Animator:
   serializedVersion: 3
