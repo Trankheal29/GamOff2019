@@ -52,13 +52,15 @@ public class SoulManagement : MonoBehaviour
                 playerInScene.GetComponent<PlayerMovement>().enabled = false;
                 playerInScene.GetComponent<SoulCast>().enabled = false; }
         }
-        else
+        else 
         {
             camConfinerP = playerInScene.GetComponentInChildren<CinemachineConfiner>();
             camConfinerP.m_BoundingShape2D = LevelBound.GetComponent<PolygonCollider2D>();
             anim.SetBool("Cast", false);
             playerInScene.GetComponent<PlayerMovement>().enabled = true;
-            playerInScene.GetComponent<SoulCast>().enabled = true; 
+            if (SceneManager.GetActiveScene().buildIndex > 1) {
+                playerInScene.GetComponent<SoulCast>().enabled = true;
+            }
         }
 
         

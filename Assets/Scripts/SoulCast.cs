@@ -9,7 +9,7 @@ public class SoulCast : MonoBehaviour
     public GameObject Player;
     Rigidbody2D rbPlayer;
     public bool isGrounded;
-    bool WasGrounded;
+    public bool WasGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;

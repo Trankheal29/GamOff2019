@@ -13,7 +13,7 @@ public class Fall : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-        Invoke("BlockFall", 0.2f);
+        Invoke("BlockFall", 0.5f);
         }
     }
 

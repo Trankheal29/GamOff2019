@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     Queue<Dialogue.Info> dialogueInfo;
     //Queue<string> sentences;
-    private void Start()
+    private void Awake()
     {
 
         dialogueInfo = new Queue<Dialogue.Info>();
@@ -32,14 +32,14 @@ public class DialogueManager : MonoBehaviour
        foreach (char letter in sentence.ToCharArray())
        {
             textDisplay.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            yield return null;
        }
    }
 
     public void StartDialogue(Dialogue.Info[] dialogue)
     {
         animator.SetBool("IsOpen", true);
-
+        
       
         dialogueInfo.Clear();
         //sentences.Clear();
@@ -57,6 +57,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        
 
         if (portrait != null)
         {
@@ -76,12 +77,14 @@ public class DialogueManager : MonoBehaviour
         portrait.SetActive(true);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        
+        Time.timeScale = 0f;
+
     }
 
     public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
         portrait.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

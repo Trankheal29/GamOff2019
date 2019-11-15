@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTriggerSoul : MonoBehaviour
 {
     public Dialogue dialogues;
     Dialogue.Info[] dialogue;
@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Soul"))
         {
             dialogue = dialogues.dialogueInfo;
             TriggerDialogue();
